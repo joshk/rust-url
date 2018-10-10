@@ -34,6 +34,10 @@ jobs:
     install: rustup target add wasm32-unknown-unknown
     script: cargo build --all --target=wasm32-unknown-unknown
 
+  - os: windows
+    install: rustup target add i686-pc-windows-msvc
+    script: cargo test --target i686-pc-windows-msvc
+
 notifications:
   webhooks: http://build.servo.org:54856/travis
 
